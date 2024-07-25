@@ -30,10 +30,10 @@ public class CiudadanoController {
 	@CrossOrigin()
 	@RequestMapping(method = RequestMethod.POST, path = "/", produces = "application/json")
 	@ResponseBody
-	public ResponseEntity<String> createUAdscripcionAreas(@RequestBody CiudadanoPayload payload) {
+	public ResponseEntity<String> registrarCiudadano(@RequestBody CiudadanoPayload payload) {
 		MetodosUtils utils = new MetodosUtils();
 		DTOResponse response = new DTOResponse();
-		ciudadanoService.registerCiudadano(payload, response);
+		ciudadanoService.registrarCiudadano(payload, response);
 		return ResponseEntity.ok().header(null).body(utils.objectToJson(response));
 	}
 

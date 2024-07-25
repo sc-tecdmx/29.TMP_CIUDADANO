@@ -3,7 +3,7 @@ package mx.gob.tecdmx.directorio_ciudadano.api.ciudadano;
 import java.util.Date;
 
 public class CiudadanoPayload {
-	
+	int idUsuario;
 	String nombre;
 	String apellido1;
 	String apellido2;
@@ -139,8 +139,12 @@ public class CiudadanoPayload {
 	public void setTipoIdentificacion(String tipoIdentificacion) {
 		this.tipoIdentificacion = tipoIdentificacion;
 	}
-	
-	
+	public int getIdUsuario() {
+		return idUsuario;
+	}
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
+	}
 	
 	
 }
